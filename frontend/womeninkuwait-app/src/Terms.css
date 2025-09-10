@@ -1,0 +1,144 @@
+.terms-page {
+  font-family: 'Poppins', sans-serif;
+  /* UPDATED: Made the gradient more noticeable using brand theme colors */
+  background-image: linear-gradient(to bottom, #ffffff 0%, #fff0f8 100%);
+  color: #333;
+  line-height: 1.7;
+  padding-bottom: 6rem; /* Increased padding to better display the gradient */
+}
+
+/* Header Section */
+.terms-header {
+  background-color: #de2f91; /* Brand orange color */
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.terms-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.terms-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content Container */
+.terms-content-container {
+  max-width: 900px;
+  margin: -3rem auto 0; /* Adjusted bottom margin to 0 */
+  position: relative;
+  z-index: 10;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 3rem;
+}
+
+.last-updated {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.terms-content h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #de2f91; /* Brand pink color */
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.terms-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Style for the new bullet points */
+.terms-content ul {
+  /* UPDATED: Aligned bullet points to the left edge */
+  list-style-position: inside;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.terms-content li {
+  margin-bottom: 0.75rem;
+}
+
+
+.terms-content a {
+  color: #ef512c; /* Brand dark orange */
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.terms-content a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .terms-header {
+    padding: 3rem 1.5rem;
+  }
+
+  .terms-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .terms-content-container {
+    padding: 2.5rem;
+    margin: -2rem auto 0;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .terms-header h1 {
+    font-size: 2rem;
+  }
+  
+  .terms-content-container {
+    padding: 2rem;
+    width: 95%;
+    margin-bottom: 0;
+  }
+
+  .terms-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .terms-content p, .terms-content ul {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+    .terms-header {
+        padding: 2.5rem 1rem;
+    }
+
+    .terms-content-container {
+        padding: 1.5rem;
+        margin-top: -1.5rem;
+    }
+
+    .last-updated {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+    }
+}
+

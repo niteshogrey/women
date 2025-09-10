@@ -1,0 +1,148 @@
+.policy-page {
+  font-family: 'Poppins', sans-serif;
+  background-image: linear-gradient(to bottom, #ffffff 0%, #fff0f8 100%);
+  color: #333;
+  line-height: 1.7;
+  padding-bottom: 6rem;
+  overflow-x: hidden; /* Prevents horizontal scroll during animation */
+}
+
+/* Header Section */
+.policy-header {
+  background-color: #f69453; /* Brand orange color */
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.policy-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.policy-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content Container */
+.policy-content-container {
+  max-width: 900px;
+  margin: -3rem auto 0;
+  position: relative;
+  z-index: 10;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 3rem;
+  /* Added Animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.last-updated {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.policy-content h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #de2f91; /* Brand pink color */
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.policy-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.policy-content ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.policy-content li {
+  margin-bottom: 0.75rem;
+}
+
+.policy-content a {
+  color: #ef512c; /* Brand dark orange */
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.policy-content a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .policy-header {
+    padding: 3rem 1.5rem;
+  }
+  .policy-header h1 {
+    font-size: 2.5rem;
+  }
+  .policy-content-container {
+    padding: 2.5rem;
+    margin: -2rem auto 0;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .policy-header h1 {
+    font-size: 2rem;
+  }
+  .policy-content-container {
+    padding: 2rem;
+    width: 95%;
+  }
+  .policy-content h2 {
+    font-size: 1.5rem;
+  }
+  .policy-content p, .policy-content ul {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+    .policy-header {
+        padding: 2.5rem 1rem;
+    }
+    .policy-content-container {
+        padding: 1.5rem;
+        margin-top: -1.5rem;
+    }
+    .last-updated {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+    }
+}

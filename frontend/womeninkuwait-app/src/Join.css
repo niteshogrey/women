@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400..900&display=swap');
+
+/* Brand colors from your PDF */
+:root {
+  /* Using lighter versions of your provided colors for the gradient */
+  --brand-pink-light: #fde2f3;
+  --brand-orange-light: #fff0e6;
+  --brand-magenta: #de2f91; 
+  --text-dark: #333;
+  --text-light: #ffffff;
+  --background-light: #ffffff;
+}
+
+.join-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Changed to full viewport height */
+  padding: 2rem;
+  /* UPDATED: Light gradient background */
+  background: linear-gradient(135deg, var(--brand-pink-light), var(--brand-orange-light));
+  color: var(--text-dark); /* Changed text to dark for better contrast on light bg */
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.join-content {
+  max-width: 700px;
+  width: 100%;
+  z-index: 2;
+}
+
+.join-title {
+  font-size: clamp(2rem, 7vw, 3rem);
+  font-weight: 550;
+  line-height: 1.1;
+  margin: 0 0 1.5rem 0;
+  color: #333;
+}
+
+.title-highlight {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 450;
+  color: var(--brand-magenta);
+}
+
+.join-description {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-weight: 500;
+  margin: 0 auto 3rem auto;
+  max-width: 600px;
+  color: #555;
+}
+
+/* Form Styles */
+.join-form {
+  background-color: var(--background-light);
+  border-radius: 16px; /* Slightly more rounded */
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  /* UPDATED: Floating animations */
+  animation: 
+    fadeInUp 0.8s 0.2s ease-out forwards,
+    float 6s ease-in-out infinite 1s; /* Added float animation with a delay */
+  opacity: 0;
+}
+
+.form-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.form-group input,
+.phone-input-group {
+  flex: 1;
+}
+
+.form-group input,
+.phone-input-group select,
+.phone-input-group input {
+  min-width: 0; /* Allow inputs to shrink */
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  color: var(--text-dark);
+}
+
+.form-group input:focus,
+.phone-input-group select:focus,
+.phone-input-group input:focus {
+  outline: none;
+  border-color: var(--brand-magenta);
+  box-shadow: 0 0 0 3px rgba(222, 47, 145, 0.2);
+}
+
+.phone-input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center; /* Vertically align items */
+}
+
+.phone-input-group select {
+  flex: 0 0 100px; 
+  background-color: #f9f9f9;
+}
+
+.phone-input-group input {
+  flex-grow: 1;
+}
+
+/* UPDATED: Smaller and centered button */
+.submit-button {
+  width: 100%;
+  max-width: 250px; /* Control max size */
+  display: block; /* Needed for margin auto to work */
+  margin: 2rem auto 0 auto; /* Center the button and add top margin */
+  padding: 1rem; /* Reduced padding */
+  font-size: 1rem; /* Slightly smaller font */
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-light);
+  background-color: var(--brand-magenta);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #c72a81;
+  transform: translateY(-3px);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* NEW: Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+  50% {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  }
+  100% {
+    transform: translateY(0px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+}
+
+
+.decorative-circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(222, 47, 145, 0.1); /* Use brand color for circles */
+  z-index: 1;
+  animation: float 8s ease-in-out infinite; /* Make circles float too */
+}
+.circle-1 { width: 150px; height: 150px; top: 10%; left: 15%; animation-duration: 10s; }
+.circle-2 { width: 50px; height: 50px; top: 20%; right: 20%; animation-duration: 7s; animation-delay: 1s; }
+.circle-3 { width: 100px; height: 100px; bottom: 15%; right: 10%; animation-duration: 9s; }
+.circle-4 { width: 80px; height: 80px; bottom: 30%; left: 5%; animation-duration: 12s; animation-delay: 2s;}
+.circle-5 { width: 30px; height: 30px; top: 70%; left: 35%; animation-duration: 6s; }
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .join-title {
+    font-size: clamp(2.2rem, 12vw, 3.5rem);
+  }
+  .join-description {
+    font-size: 1.1rem;
+  }
+  .form-group {
+    /* Make form fields stack on tablets and below */
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .join-page-container {
+    padding: 2rem 1rem;
+  }
+  .join-form {
+    padding: 2rem 1.5rem;
+  }
+  /* FIX: On very small screens, make phone input group stack vertically to prevent overflow */
+  .phone-input-group {
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+  .phone-input-group select {
+      flex-basis: auto; /* Reset fixed basis */
+  }
+}

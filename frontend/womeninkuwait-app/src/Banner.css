@@ -1,0 +1,71 @@
+.top-banner {
+  width: 100%;
+  background: #f69453;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 34px;   /* slightly smaller than navbar */
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 0 12px;
+  box-sizing: border-box;
+
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.banner-text {
+  padding: 6px 44px 6px 12px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.banner-linkedin {
+  position: absolute;
+  right: 24px;
+  color: #fff;
+  transition: color 0.2s;
+}
+.banner-linkedin:hover,
+.banner-linkedin:focus {
+  color: #0A66C2;
+}
+
+.banner-highlight {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .top-banner {
+    font-size: 0.9rem;
+    min-height: 30px;
+  }
+  .banner-linkedin {
+    right: 16px;
+  }
+  .banner-text {
+    padding-right: 36px;
+  }
+}
+
+@media (max-width: 350px) {
+  .top-banner {
+    font-size: 0.84rem;
+  }
+  .banner-linkedin {
+    right: 12px;
+  }
+  .banner-text {
+    padding-right: 32px;
+  }
+}

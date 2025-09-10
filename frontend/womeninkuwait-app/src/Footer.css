@@ -1,0 +1,193 @@
+.footer {
+  width: 100vw;
+  background-color: #fafafa; /* Softer, off-white background */
+  padding: 4rem 2rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+  border-top: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 4rem; /* Increased gap for better spacing between main sections */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* === LEFT SIDE: LOGO AND INFO (ALIGNMENT FIXED) === */
+.footer-info {
+  flex: 1;
+  min-width: 280px; /* Prevents it from getting too squished */
+  max-width: 400px; /* Limit width for large screens */
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns items to the left within the container */
+}
+
+.footer-logo-img {
+  height: 55px; /* Controls the logo height */
+  width: auto; /* Maintains aspect ratio to prevent stretching */
+  margin-bottom: 1rem;
+}
+
+/* Styles for the new "Email Us" link */
+.footer-email-link {
+  font-size: 1.2rem; /* Increased font size */
+  font-weight: 600;
+  color: #555; /* Changed color to match social icon hover */
+  text-decoration: none;
+  margin-bottom: 1.5rem; /* Provides space between email and social icons */
+  transition: color 0.2s ease;
+}
+
+.footer-email-link:hover {
+  color: #f69453; /* Using existing hover color for consistency */
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.25rem;
+}
+
+/* Styles for the social media links */
+.footer-social a {
+  color: #555; /* Softened the icon color from pure black */
+  display: inline-block; /* Helps with alignment and applying transforms */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Styles for the SVG icons within the links */
+.footer-social a svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  vertical-align: middle; /* Better alignment with surrounding elements */
+}
+
+.footer-social a:hover {
+  color: #b05ba5; /* Hover color changed to your brand purple */
+  transform: translateY(-2px);
+}
+
+/* === RIGHT SIDE: NAVIGATION LINKS === */
+.footer-navigation {
+  flex: 1.5; /* Give navigation more flex space */
+  display: flex;
+  justify-content: space-around; /* Distribute columns more evenly */
+  gap: 3rem; /* Space between the link columns */
+  min-width: 300px;
+}
+
+.footer-links-column {
+  flex: 1; /* Allow columns to grow and shrink */
+  min-width: 120px; /* Prevent single column from getting too narrow */
+}
+
+.footer-links-column h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-links-column ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-links-column li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links-column a {
+  color: #555;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links-column a:hover {
+  color: #f69453;
+  text-decoration: underline; /* Added underline on hover */
+}
+
+/* === BOTTOM BAR === */
+.footer-bottom {
+  border-top: 1px solid #e0e0e0;
+  margin: 3rem auto 0;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+  color: #777;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #f69453;
+  text-decoration: underline; /* Added underline on hover */
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2rem; /* Reduce gap when stacking */
+  }
+  .footer-info {
+    margin-right: 0; /* Remove extra margin on smaller screens */
+  }
+  .footer-navigation {
+    flex-direction: row; /* Keep side-by-side if space allows */
+    justify-content: flex-start; /* Align left */
+    gap: 4rem; /* Adjust gap between columns */
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-navigation {
+    flex-direction: column; /* Stack columns on very small screens */
+    gap: 2rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+

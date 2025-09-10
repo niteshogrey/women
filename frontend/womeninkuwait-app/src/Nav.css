@@ -1,0 +1,316 @@
+.navbar {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+  z-index: 1000;
+  min-height: 80px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 80px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #28282b;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  padding: 2px 4px;
+  transition: color 0.3s;
+}
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #ef512c;
+}
+
+.dropdown-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-link-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #28282b;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  padding: 2px 4px;
+  transition: color 0.3s;
+  user-select: none; /* Prevents text selection on click */
+}
+
+.nav-link-dropdown:hover,
+.nav-link-dropdown:hover .chevron-icon {
+  color: #ef512c;
+}
+
+.chevron-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.chevron-icon.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  list-style: none;
+  padding: 8px 0;
+  margin: 10px 0 0 0;
+  min-width: 150px;
+  z-index: 1100;
+  animation: fadeIn 0.2s ease-out;
+  border: 1px solid #eee;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f7f7f7;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  color: #de2f91;
+}
+
+.mobile-side-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 2000;
+  display: flex;
+  align-items: flex-start;
+}
+.mobile-side-menu {
+  background: #fff;
+  width: 80vw;
+  max-width: 300px;
+  height: 100vh;
+  box-shadow: 2px 0 18px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  padding: 18px 16px 0 24px; /* Added more left padding */
+  animation: slideInLeft 0.2s cubic-bezier(0.72, 0.09, 0.98, 0.31) 1;
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.side-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.close-menu {
+  cursor: pointer;
+}
+.mobile-side-menu ul {
+  list-style: none;
+  margin: 12px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.mobile-side-menu > ul > li {
+  width: 100%;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-side-menu > ul > li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* New class to center the join button container */
+.mobile-side-menu > ul > li.join-link-mobile {
+  display: flex;
+  justify-content: center;
+  border-bottom: none;
+}
+
+.mobile-side-menu li a {
+  text-decoration: none;
+  color: #28282b; /* Text color to black */
+  font-size: 1.15rem;
+  font-weight: 500;
+  transition: color 0.3s;
+  letter-spacing: 0.8px;
+}
+.mobile-side-menu li a:hover,
+.mobile-side-menu li a:focus {
+  color: #ef512c;
+}
+
+/* New class to style the join button itself */
+.mobile-side-menu li a.join-btn-mobile {
+  background-color: #ef512c;
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.mobile-side-menu li a.join-btn-mobile:hover {
+  background-color: #de2f91;
+  color: #fff;
+}
+
+
+.mobile-dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #28282b; /* Text color to black */
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  width: 100%;
+}
+.mobile-dropdown-toggle:hover {
+  color: #ef512c;
+}
+
+.mobile-dropdown-menu {
+  list-style: none;
+  padding-left: 1rem; /* Indent sub-menu */
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  animation: slideDownMobile 0.3s ease;
+  overflow: hidden;
+}
+
+@keyframes slideDownMobile {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+
+.mobile-dropdown-menu li a {
+  font-size: 1.05rem;
+}
+
+@media (max-width: 850px) {
+  .nav-container {
+    max-width: 98vw;
+  }
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 12px;
+  }
+  .logo-img {
+    height: 34px;
+  }
+  .mobile-side-menu {
+    width: 98vw;
+    padding: 18px 16px 0 24px; /* Corrected padding */
+  }
+}
+
