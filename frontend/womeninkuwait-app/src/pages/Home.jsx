@@ -2,9 +2,9 @@
 import { Link } from 'react-router-dom';
 import '../Home.css';
 import React, { useState, useEffect, useCallback } from 'react';
-// --- IMPORTANT ---
-// Replace this with the correct path to your image in the assets folder
-import connectImage from '../assets/static4.jpg'; 
+import connectImage from '../assets/4.jpg'; 
+import heroImage from '../assets/main.png';
+import visionImage from '../assets/7.jpg';
 
 
 const pressQuotes = [
@@ -47,20 +47,20 @@ const Home = () => {
     <>
       {/* --- HERO SECTION --- */}
       <section className="hero-section">
+        <img src={heroImage} alt="Inspiring women connecting at a Women in Kuwait event" className="hero-image" />
         <div className="hero-content">
           <h1 className="hero-title">
-            Empowering Kuwait's
-            <br />
-            <span className="title-accent">Female Leaders</span>
+             Women circle for connections in 
+           
+            <span className="title-accent"> Kuwait</span>
           </h1>
           <div className="hero-footer">
             <p className="hero-description">
-              The leading network for female entrepreneurs and professionals in
-              Kuwait, fostering ambition through connections, resources, and
-              career opportunities.
+              Meet women from every walk of life through social gatherings, skill-building workshops, or a quick scroll.
+
             </p>
             <Link to="/join" className="cta-button">
-              Join The Network
+              Find Your Community
             </Link>
           </div>
         </div>
@@ -83,19 +83,15 @@ const Home = () => {
             </div>
           </div>
           <div className="ambition-text">
-            <h2 className="ambition-title">
-              Redefining
-              <br />
-              <span className="ambition-title-accent">Success</span>
-            </h2>
+            
+              <span className="ambition-title-accent">Who are whe?</span>
+            
             <p className="ambition-description">
-              We are building a powerful, collaborative community where Kuwait's
-              most ambitious women thrive.At Women Kuwait, we champion a new
-              era of professional achievement—one built on mutual support,
-              shared knowledge, and collective growth.
+              After two decades in Kuwait, Maimuna realized that while women have been achieving incredible things in Kuwait, there wasn’t a community where they could consistently meet.<br /><br/> Women Kuwait exists for women who crave real connection. 
+              Step away from surface-level networking and into a world of fun parties and lifelong friendships.
             </p>
             <Link to="/about-us" className="cta-button">
-              Learn More About Us
+              Find Friends
             </Link>
           </div>
         </div>
@@ -115,18 +111,23 @@ const Home = () => {
           </div>
           <div className="impact-stats">
             <div className="stat-item">
-              <p className="stat-number">500+</p>
-              <p className="stat-label">Members</p>
+              <p className="stat-number">41%</p>
+              <p className="stat-label">Kuwaiti startups are lead by women</p>
             </div>
             <div className="stat-item">
-              <p className="stat-number">25+</p>
-              <p className="stat-label">Events Hosted</p>
+              <p className="stat-number">14+</p>
+              <p className="stat-label">Years is the average education number</p>
             </div>
             <div className="stat-item">
-              <p className="stat-number">15+</p>
-              <p className="stat-label">Industry Partners</p>
+              <p className="stat-number">1.2%</p>
+              <p className="stat-label">MENA VC funding went to women-led startups</p>
             </div>
+            
           </div>
+          <div className="stats-point">
+            <h4>Kuwaiti women are ready, Let's work together!!</h4>
+          </div>
+          
         </div>
       </section>
 
@@ -134,17 +135,11 @@ const Home = () => {
       <section className="events-section">
         <div className="events-content">
           <div className="events-info-left">
-            {/* The text content is now wrapped in its own div for better styling */}
             <div className="events-info-text-content">
-              <h3 className="events-info-title">Connect & Grow</h3>
-              <div className="free-to-join">
-                <p>Free to Join</p>
-              </div>
+              <h3 className="events-info-title">Join the Sisterhood</h3>
               <p className="events-info-description">
-                Expand your influence by meeting ambitious women from across
-                Kuwait. Learn how to build and leverage your network, boost your
-                confidence with new skills, and gain exposure to career-defining
-                possibilities. Your journey starts here.
+                Connect with ambitious women, attend curated events, and collaborate with inspiring businesses.
+                Your community is here and it’s waiting for you.
               </p>
               <Link to="/join" className="events-info-link">
                 <span>Become a Member</span>
@@ -162,7 +157,7 @@ const Home = () => {
                 </svg>
               </Link>
             </div>
-            {/* The new image is placed here */}
+            {/* The image is placed here */}
             <img 
               src={connectImage} 
               alt="A group of professional women in Kuwait" 
@@ -174,8 +169,6 @@ const Home = () => {
             <div className="events-bg-lines"></div>
             <h2 className="events-main-title">
               Upcoming Events
-              <br />
-              in Kuwait
             </h2>
             <Link to="/events" className="events-cta-button">
               See All Events
@@ -184,39 +177,48 @@ const Home = () => {
         </div>
       </section>
 
-      {/* --- ADDED: RESOURCES SECTION --- */}
-      <section className="resources-section">
-        <div className="resources-content">
-          <h2 className="resources-title">Our Resources</h2>
-          <p className="resources-description">
-            Women Kuwait empowers women to act on their own ambitions while
-            recognizing key barriers women often encounter when entering and
-            advancing within the workforce. We provide curated resources,
-            workshops, and mentorship opportunities designed to help you
-            navigate the unique professional landscape in Kuwait and build a
-            thriving career.
-          </p>
+      {/* ---  VISION SECTION --- */}
+      <section className="vision-section">
+        <div className="vision-content">
+            <div className="vision-image">
+                <img src={visionImage} alt="A woman with pink hair, representing the vibrant Wom(en) Kuwait community" />
+            </div>
+            <div className="vision-text">
+                <h2 className="vision-title">Our Vision</h2>
+                <p className="vision-description">
+                    At Wom(en) Kuwait, you will form effortless but meaningful connections. We bring ambitious and curious women together through coffee mornings, creative workshops to panel talks and late-night dinners. You can engage as much as you like or as little. More than a club, we are a sisterhood.
+                </p>
+                <Link to="/about-us" className="cta-button">
+                    Learn More
+                </Link>
+            </div>
         </div>
       </section>
       <section className="collaboration-press-section">
         <div className="collaboration-press-content">
           <div className="collaboration-content-left">
-            <h2 className="collaborate-title">Let's Collaborate</h2>
+            <h2 className="collaborate-title">Let’s Uplift Women Together</h2>
             <p className="collaborate-description">
-              Our partners support TWN's efforts to empower future women leaders. We join forces with companies to create new ways to network, offer our members employment opportunities and our partners recruitment opportunities, and build brand collaborations.
+              When businesses and communities join forces, everyone wins. By partnering with us, you’ll not only uplift women through opportunities, mentorship, and shared experiences, 
+              but also showcase your brand to an engaged and growing network. 
             </p>
             <div className="partnership-grid">
               <div className="partnership-item">
                 <h3>Sponsors</h3>
-                <p>Sponsor our professional development workshops, networking events, speaker series, and more.</p>
+                <p>Support our community by sponsoring wellness sessions, pop-up markets, or networking events. 
+                  Our high-achieving circle of women will rave about your beauty corners and curated gift bags for days.</p>
               </div>
                <div className="partnership-item">
                 <h3>Recruiters</h3>
-                <p>Access our unparalleled talent pool to recruit ambitious, high-achieving women directly.</p>
+                <p>Get direct access into a network of powerful women. Share career opportunities, 
+                  host skill-building workshops, and connect directly with talent ready to grow.</p>
               </div>
               <div className="partnership-item">
                 <h3>Speakers</h3>
-                <p>Share your industry experience and inspire the next generation of leaders in Kuwait.</p>
+                <p>We want to hear from you. Bring your expertise to our stage, 
+                whether in career coaching, entrepreneurship, or personal growth. Inspire, 
+                teach, and gain visibility with a motivated audience.
+                </p>
               </div>
               <div className="partnership-item">
                  <Link to="/partner" className="partner-cta-button">

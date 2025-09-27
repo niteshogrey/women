@@ -1,6 +1,8 @@
 import React from "react";
-import "../Footer.css"; // Corrected path to be relative to the component
-import logo from "../assets/logo1.png"; // This path is correct based on your folder structure
+import { Link } from 'react-router-dom'; 
+import "../Footer.css"; 
+import logo from "../assets/logo1.png"; 
+import qayu from '../assets/qayu-logo.png';
 
 import {
   FaInstagram,
@@ -20,24 +22,22 @@ export default function Footer() {
             alt="Women in Kuwait Logo"
             className="footer-logo-img"
           />
-          {/* --- UPDATED --- */}
-          {/* Replaced tagline with the "Email Us" mailto link */}
           <a
-            href="mailto:info@womeninkuwait.com"
+            href="mailto:Info@womenkuwait.com"
             className="footer-email-link"
           >
             Email Us
           </a>
-          {/* --- END UPDATE --- */}
           <div className="footer-social">
             <a
-              href="#"
+              href="https://www.instagram.com/women.kuwait?igsh=MXcyNWcyOWRjaDNtcw=="
               aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaInstagram />
             </a>
+            {/*
             <a
               href="#"
               aria-label="Twitter"
@@ -53,7 +53,7 @@ export default function Footer() {
               rel="noopener noreferrer"
             >
               <FaLinkedin />
-            </a>
+            </a> */}
             <a
               href="#"
               aria-label="Facebook"
@@ -65,7 +65,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Group 2: All navigation links, now grouped for better layout */}
+        {/* Group 2: All navigation links */}
         <div className="footer-navigation">
           <div className="footer-links-column">
             <h3>Get Involved</h3>
@@ -76,6 +76,18 @@ export default function Footer() {
               <li>
                 <a href="/contact">Contact Us</a>
               </li>
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/GyFp4URw9m6WLnZX6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-getdirection"
+                >
+                  Get direction <span className="arrow" >&gt;</span>
+                </a>
+              </li>
+                
+        
             </ul>
           </div>
           <div className="footer-links-column">
@@ -87,18 +99,30 @@ export default function Footer() {
               <li>
                 <a href="/faq">FAQs</a>
               </li>
+              <li>
+                <a href="tel:+971526260940" className="footer-phone">
+                  Talk to Us
+                </a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>© 2025 Women in Kuwait. All rights reserved.</p>
+        <p>© 2025 Women Kuwait. All rights reserved.</p>
+        <div className="footer-managed-by">
+        <span>Created & Managed by</span>
+        <a href="https://qayudigital.com/" target="_blank" rel="noopener noreferrer">
+          <img src={qayu} alt="QAYU Digital Logo" className="qayu-logo" />
+        </a>
+      </div>
         <div className="footer-bottom-links">
           <a href="/terms">Terms & Conditions</a>
           <a href="/policy">Privacy Policy</a>
         </div>
       </div>
+      
     </footer>
   );
 }

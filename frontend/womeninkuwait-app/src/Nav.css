@@ -59,7 +59,7 @@
 }
 .nav-links li a {
   text-decoration: none;
-  color: #28282b;
+  color: #555;
   font-size: 17px;
   font-weight: 500;
   letter-spacing: 0.8px;
@@ -86,7 +86,7 @@
   letter-spacing: 0.8px;
   padding: 2px 4px;
   transition: color 0.3s;
-  user-select: none; /* Prevents text selection on click */
+  user-select: none; 
 }
 
 .nav-link-dropdown:hover,
@@ -159,14 +159,14 @@
   align-items: flex-start;
 }
 .mobile-side-menu {
-  background: #fff;
+  background: linear-gradient(135deg, var(--brand-pink-light), var(--brand-orange-light));
   width: 80vw;
   max-width: 300px;
   height: 100vh;
   box-shadow: 2px 0 18px rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
-  padding: 18px 16px 0 24px; /* Added more left padding */
+  padding: 18px 16px 0 16px;
   animation: slideInLeft 0.2s cubic-bezier(0.72, 0.09, 0.98, 0.31) 1;
 }
 @keyframes slideInLeft {
@@ -201,8 +201,10 @@
 .mobile-side-menu > ul > li {
   width: 100%;
   padding-bottom: 16px;
+  padding-left: 10px; 
   margin-bottom: 16px;
   border-bottom: 1px solid #eee;
+  text-align: left; 
 }
 
 .mobile-side-menu > ul > li:last-child {
@@ -210,16 +212,16 @@
   margin-bottom: 0;
 }
 
-/* New class to center the join button container */
+
 .mobile-side-menu > ul > li.join-link-mobile {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; 
   border-bottom: none;
 }
 
 .mobile-side-menu li a {
   text-decoration: none;
-  color: #28282b; /* Text color to black */
+  color: #28282b; 
   font-size: 1.15rem;
   font-weight: 500;
   transition: color 0.3s;
@@ -230,7 +232,6 @@
   color: #ef512c;
 }
 
-/* New class to style the join button itself */
 .mobile-side-menu li a.join-btn-mobile {
   background-color: #ef512c;
   color: #fff;
@@ -251,7 +252,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  color: #28282b; /* Text color to black */
+  color: #28282b; 
   font-size: 1.15rem;
   font-weight: 500;
   letter-spacing: 0.8px;
@@ -263,7 +264,7 @@
 
 .mobile-dropdown-menu {
   list-style: none;
-  padding-left: 1rem; /* Indent sub-menu */
+  padding-left: 3rem; 
   margin-top: 15px;
   display: flex;
   flex-direction: column;
@@ -310,7 +311,7 @@
   }
   .mobile-side-menu {
     width: 98vw;
-    padding: 18px 16px 0 24px; /* Corrected padding */
+    padding: 18px 16px 0 16px; 
   }
 }
 

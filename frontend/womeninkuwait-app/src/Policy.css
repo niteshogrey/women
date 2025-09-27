@@ -4,12 +4,12 @@
   color: #333;
   line-height: 1.7;
   padding-bottom: 6rem;
-  overflow-x: hidden; /* Prevents horizontal scroll during animation */
+  overflow-x: hidden; 
 }
 
 /* Header Section */
 .policy-header {
-  background-color: #f69453; /* Brand orange color */
+  background-color: #de2f91;
   padding: 4rem 2rem;
   text-align: center;
   color: #fff;
@@ -56,33 +56,65 @@
 }
 
 .last-updated {
-  font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #3d3b3b;
+  margin-bottom: 2.5rem;
   border-bottom: 1px solid #eee;
   padding-bottom: 1.5rem;
+}
+
+/* --- NEW STYLES FOR NUMBERED SECTIONS --- */
+.policy-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-number {
+  min-width: 33px;
+  height: 33px;
+  background-color: #de2f91;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.section-content {
+  padding-left: calc(36px + 1rem);
 }
 
 .policy-content h2 {
   font-size: 1.75rem;
   font-weight: 600;
-  color: #de2f91; /* Brand pink color */
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  color: #de2f91; 
+  margin: 0;
 }
 
 .policy-content p {
   font-size: 1rem;
-  color: #555;
+  color: #3d3b3b;
   margin-bottom: 1.5rem;
+  margin-top: 0; 
 }
-
 .policy-content ul {
-  list-style-position: inside;
-  padding-left: 0;
-  margin-bottom: 1.5rem;
+  list-style-type: disc;
+  list-style-position: outside; 
+  padding-left: 0; 
+  margin: 0;
+  text-align: left;
   font-size: 1rem;
-  color: #555;
+  font-weight: 500;
+  color: #3d3b3b;
 }
 
 .policy-content li {
@@ -90,7 +122,7 @@
 }
 
 .policy-content a {
-  color: #ef512c; /* Brand dark orange */
+  color: #ef512c; 
   text-decoration: none;
   font-weight: 500;
   transition: opacity 0.2s ease-in-out;
@@ -130,6 +162,9 @@
   }
   .policy-content p, .policy-content ul {
     font-size: 0.95rem;
+  }
+  .section-content {
+    padding-left: 0;
   }
 }
 

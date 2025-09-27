@@ -14,14 +14,15 @@ const Partner = () => {
           <section className="collaborate-section">
             <h2>Collaborate With Us</h2>
             <p>
-              We offer a number of ways companies can partner with Women in Kuwait, including sponsorship of our professional development workshops, networking events, and speaker events. We join forces with companies to create new ways to network and offer our members employment opportunities.
+              As our partners, you can sponsor our development workshops, rent out studio space for group sessions, or host exclusive dinners. By partnering with us, your brand will be able to reach the brightest minds in Kuwait. 
+
             </p>
           </section>
 
           <section className="sponsors-section">
             <h2>Corporate Sponsors</h2>
             <p>
-              Reach an audience of ambitious and recently graduated women in Kuwait. We partner with advertisers to build brand awareness and align brands with the largest professional women's networking organization in the nation. Your company will be able to market products and services directly.
+              Our diverse community of women in Kuwait will allow you to reach completely untapped markets. Partner with us to bring brand awareness and reach all demographics, from fresh graduates to established venture owners.
             </p>
             
             {/* <div className="sponsor-tier">

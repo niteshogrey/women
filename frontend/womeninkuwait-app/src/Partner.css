@@ -9,7 +9,7 @@
 
 /* Header Section */
 .partner-header {
-  background-color: #ef512c; /* Brand orange color */
+  background-color: #de2f91; 
   padding: 4rem 2rem;
   text-align: center;
   color: #fff;
@@ -52,7 +52,7 @@
 .partner-content h2 {
   font-size: 1.75rem;
   font-weight: 600;
-  color: #de2f91; /* Brand pink color */
+  color: #de2f91; 
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #fde2f4;
@@ -61,6 +61,7 @@
 .partner-content p {
   font-size: 1rem;
   color: #555;
+  font-weight: 500;
   margin-bottom: 2.5rem;
 }
 
@@ -70,7 +71,7 @@
 
 .sponsors-section h3 {
   font-size: 1.4rem;
-  color: #ef512c; /* Brand dark orange */
+  color: #ef512c; 
   margin-bottom: 1.5rem;
 }
 

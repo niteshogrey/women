@@ -1,65 +1,117 @@
-import React from 'react';
-import '../Events.css'; // Don't forget to import the CSS file
+import React, { useState } from 'react';
+import '../Events.css'; 
 
-// --- IMPORTANT ---
-// Replace this with the correct path to your image in the assets folder
-import eventsHeroImage from '../assets/static3.jpg';
+import eventsHeroImage from '../assets/6.png';
+import joinSectionImage from '../assets/3.jpg';
+import digitalMarketingImage from '../assets/5.jpg';
 
-// Placeholder data for events
+
 const upcomingEventsData = [
   {
-    image: 'https://placehold.co/600x400/ef512c/white?text=Workshop',
+    image: digitalMarketingImage,
     title: 'Digital Marketing Masterclass',
     date: 'October 12, 2025 at 6:00 PM',
-  },
-  {
-    image: 'https://placehold.co/600x400/de2f91/white?text=Networking',
-    title: 'Founder\'s High Tea',
-    date: 'November 5, 2025 at 4:00 PM',
+    description: 'Join us for an in-depth masterclass on the latest trends in digital marketing. This session will cover everything from SEO and content strategy to social media advertising and analytics. Perfect for entrepreneurs and marketing professionals looking to sharpen their skills.',
+    location: 'Online via Zoom',
   },
 ];
 
-const pastEventsData = [
-  {
-    image: 'https://placehold.co/600x400/a9a9a9/white?text=Past+Event',
-    title: 'Investment Readiness Bootcamp',
-    date: 'August 20, 2025',
-  },
-  {
-    image: 'https://placehold.co/600x400/a9a9a9/white?text=Past+Event',
-    title: 'Personal Branding Workshop',
-    date: 'July 15, 2025',
-  },
+const whyJoinData = [
+    {
+        title: 'Online Events',
+        text: 'Attend live webinars from experts, 80 minutes co-working hours, or skill swap where you share your skills with each other. Or you can just log in with a cup of coffee and chat with your new friends. ',
+    },
+    {
+        title: 'Offline Events',
+        text: 'Dress up to the nine for red carpet dinner, visit our collaborator’s pop-up market, or attend vision board parties. We’re continuously coming up with new concepts to keep you entertained.',
+    },
+    {
+        title: 'Volunteer',
+        text: 'We love to see women take the lead. If you think you would like to host any of the events or contribute in some other ways, drop us an email. ',
+    },
+    {
+        title: 'Mentorship',
+        text: 'Find mentors invested in your personal growth. Connect with them directly through our website or meet them at our specialized career-based events. ',
+    },
 ];
+
+
+const EventDetailModal = ({ event, onClose }) => {
+  if (!event) return null;
+
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <button className="modal-close-btn" onClick={onClose}>&times;</button>
+        <img src={event.image} alt={event.title} className="modal-image" />
+        <div className="modal-text-content">
+          <h2 className="modal-title">{event.title}</h2>
+          <p className="modal-date">{event.date}</p>
+          <p className="modal-description">{event.description}</p>
+          <div className="modal-location">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>{event.location}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 
 
 const Events = () => {
+  const [selectedEvent, setSelectedEvent] = useState(null);
+
   return (
     <div className="events-page">
       {/* --- HERO SECTION --- */}
-      <section className="events-hero-section">
-        <div className="events-hero-content">
-          <h1 className="events-hero-title">Upcoming Events</h1>
-          <p className="events-hero-description">
-            Take part in exclusive events that connect our members with
-            Kuwait's industry leaders, professional development resources, and
-            transformative career opportunities.
-          </p>
-        </div>
-        <img 
-          src={eventsHeroImage} 
-          alt="Women in Kuwait networking at an event" 
-          className="events-hero-bg-image"
-        />
-      </section>
+        <section 
+          className="events-hero-section"
+          style={{ backgroundImage: `url(${eventsHeroImage})` }}
+        >
+          <div className="events-hero-overlay"></div>
+          <div className="events-hero-content">
+            <h1 className="events-hero-title">Upcoming Events</h1>
+            <p className="events-hero-description">
+              Take part in exclusive events that connect our members with
+              Kuwait's industry leaders, professional development resources, and
+              transformative career opportunities.
+            </p>
+          </div>
+        </section>
 
-      {/* --- EVENT LISTING SECTIONS --- */}
+      {/* --- WHY JOIN SECTION --- */}
+        <section className="why-join-section">
+          <div className="why-join-container">
+            <div className="why-join-image-wrapper">
+              <img src={joinSectionImage} alt="A member of Women Kuwait smiling" className="why-join-image" />
+            </div>
+            <div className="why-join-content">
+              <h2 className="why-join-title">Events to Join</h2>
+              <div className="why-join-grid">
+                {whyJoinData.map((card, index) => (
+                  <div className="why-join-card" key={index}>
+                    <h3>{card.title}</h3>
+                    <p>{card.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section> 
+
+      {/* --- "NEXT UP" EVENT LISTING SECTION --- 
       <section className="events-list-section">
         <div className="events-list-container">
           <h2 className="events-list-title">Next Up</h2>
           <div className="events-grid">
             {upcomingEventsData.map((event, index) => (
-              <div className="event-card upcoming" key={index}>
+              <div 
+                className="event-card upcoming" 
+                key={index}
+                onClick={() => setSelectedEvent(event)} // Added onClick here
+              >
                 <div className="event-card-image-container">
                   <img src={event.image} alt={event.title} className="event-card-image" />
                 </div>
@@ -71,8 +123,9 @@ const Events = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       
+      {/* --- PAST EVENTS SECTION --- 
       <section className="events-list-section">
         <div className="events-list-container">
           <h2 className="events-list-title">Past Events</h2>
@@ -90,7 +143,10 @@ const Events = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+
+      {/* --- RENDER THE MODAL --- */}
+      <EventDetailModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />
     </div>
   );
 };

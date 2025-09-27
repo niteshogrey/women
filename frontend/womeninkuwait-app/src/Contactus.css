@@ -14,7 +14,7 @@
   background: linear-gradient(135deg, var(--brand-pink-light), var(--brand-orange-light));
   color: var(--text-dark);
   line-height: 1.7;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   overflow-x: hidden;
   min-height: 100vh;
   box-sizing: border-box;
@@ -41,6 +41,7 @@
 .contact-header p {
   font-size: 1.1rem;
   color: #555;
+  font-weight: 500;
   max-width: 650px;
   margin: 0 auto;
 }
@@ -89,15 +90,15 @@
 /* Form Layout */
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr; /* always vertical stack */
-  gap: 1.5rem; /* reduced gap between groups */
+  grid-template-columns: 1fr; 
+  gap: 1.5rem; 
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-bottom: 1.5rem; /* reduced space between groups */
+  margin-bottom: 1.5rem; 
 }
 
 .form-group:last-child {
@@ -108,12 +109,12 @@
   font-size: 1.05rem;
   font-weight: 600;
   color: var(--brand-magenta);
-  margin-bottom: 0.4rem; /* reduced space between label & input */
+  margin-bottom: 0.4rem; 
 }
 
 .form-group.checkbox-group > label {
   margin-top: 0.8rem;
-  margin-bottom: 1rem; /* reduced gap before "I am a" */
+  margin-bottom: 1rem; 
 }
 
 .form-group input[type="text"],
@@ -147,8 +148,8 @@
 .checkbox-options {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* desktop 2 columns, aligned left */
-  gap: 0.75rem 1.5rem; /* tighter spacing */
-  justify-items: start; /* align items left */
+  gap: 0.75rem 1.5rem; 
+  justify-items: start; 
 }
 
 .checkbox-item {

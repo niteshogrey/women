@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../Faq.css";
 
-// Reusable component for the plus/minus icons
+
 const AccordionIcon = ({ isOpen }) => (
   <svg
     className={`accordion-icon ${isOpen ? "open" : ""}`}
@@ -33,29 +33,29 @@ const AccordionIcon = ({ isOpen }) => (
 // Main FAQ data
 const faqData = [
   {
-    question: "What is Women in Kuwait?",
+    question: "What is Wom(en) Kuwait?",
     answer:
-      "Women in Kuwait is the leading professional network for female entrepreneurs and professionals in Kuwait. Our mission is to foster ambition through meaningful connections, curated resources, and career development opportunities.",
+      "Wom(en) Kuwait is a community where the members can gather online and offline, connect with each other, form friendships, and create meaningful collaborations. ",
   },
   {
     question: "Who is eligible to join the network?",
     answer:
-      "Our network is open to all women in Kuwait, from aspiring entrepreneurs and seasoned business owners to professionals across all industries. We believe in the power of a diverse and inclusive community.",
+      "Wom(en) Kuwait is open to any women looking for community. You could join for professional or personal development.",
   },
   {
     question: "What are the benefits of becoming a member?",
     answer:
-      "Members gain access to exclusive workshops, mentorship programs, networking events, and a supportive community of like-minded women. We provide the tools and connections to help you navigate your professional journey and build a thriving career.",
+      "Members will get access to exclusive events, discounts, and personalized support.",
   },
   {
     question: "What kind of events does Women in Kuwait host?",
     answer:
-      "We host a variety of events, including professional development workshops, panel discussions with industry leaders, networking mixers, and collaborative community projects. Our events are available both online and in-person.",
+      "Wom(en) Kuwait holds a variety of events including speed networking brunch, skill-building workshops, and group yoga sessions. ",
   },
     {
     question: "How can I get involved or stay updated?",
     answer:
-      "The best way to get involved is to join our network! You can also follow us on our social media channels and subscribe to our newsletter to stay updated on upcoming events, news, and opportunities.",
+      "To stay updated and attend events, you can sign up for our membership program. You could also collaborate with us by using the contact us form or sending us an email at Info@womenkuwait.com.",
   },
 ];
 

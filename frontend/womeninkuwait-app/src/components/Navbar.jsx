@@ -11,11 +11,6 @@ export default function Navbar() {
   const [isMobileJoinOpen, setIsMobileJoinOpen] = useState(false);
   const navRef = useRef(null);
   const joinDropdownRef = useRef(null);
-
-  // Using a placeholder for the logo.
- 
-
-
   // Effect for sticky navbar
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +24,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Effect to close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (joinDropdownRef.current && !joinDropdownRef.current.contains(event.target)) {
@@ -62,7 +56,7 @@ export default function Navbar() {
                 className="nav-link-dropdown"
                 onClick={() => setIsJoinOpen(!isJoinOpen)}
               >
-                Join
+                <li><a href="/join">Register</a></li>
                 <ChevronDown
                   size={16}
                   className={`chevron-icon ${isJoinOpen ? "open" : ""}`}
@@ -70,7 +64,7 @@ export default function Navbar() {
               </div>
               {isJoinOpen && (
                 <ul className="dropdown-menu">
-                  <li><a href="/join">Join</a></li>
+                  <li><a href="/join">Register</a></li>
                   <li><a href="/contact">Contact</a></li>
                 </ul>
               )}
@@ -107,7 +101,7 @@ export default function Navbar() {
                     className="mobile-dropdown-toggle"
                     onClick={() => setIsMobileJoinOpen(!isMobileJoinOpen)}
                   >
-                    <span>Join</span>
+                    <span>Register</span>
                     <ChevronDown
                       size={20}
                       className={`chevron-icon ${isMobileJoinOpen ? "open" : ""}`}
@@ -115,7 +109,7 @@ export default function Navbar() {
                   </div>
                   {isMobileJoinOpen && (
                     <ul className="mobile-dropdown-menu">
-                      <li><a href="/join" onClick={() => setIsOpen(false)}>Join</a></li>
+                      <li><a href="/join" onClick={() => setIsOpen(false)}>Register</a></li>
                       <li><a href="/contact" onClick={() => setIsOpen(false)}>Contact</a></li>
                     </ul>
                   )}

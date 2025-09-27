@@ -2,6 +2,42 @@ import React from 'react';
 import '../Contactus.css';
 
 const Contactus = () => {
+  const [result, setResult] = React.useState("");
+  const [showPopup, setShowPopup] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(false);
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setIsLoading(true);
+
+    const formData = new FormData(event.target);
+    formData.append("access_key", "dbf7794c-3abd-4ebd-b924-5de5f8d0b0df");
+    formData.append("subject", "New Contact Form Submission");
+    formData.append("from_name", "Women Kuwait Website");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    setIsLoading(false);
+
+    if (data.success) {
+      setResult("✅ Message Sent Successfully");
+      setShowPopup(true);
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult("❌ " + data.message);
+      setShowPopup(true);
+    }
+
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 4000);
+  };
+
   return (
     <div className="contact-page">
       <header className="contact-header">
@@ -12,7 +48,7 @@ const Contactus = () => {
       </header>
 
       <main className="contact-form-container">
-        <form className="contact-form">
+        <form className="contact-form" onSubmit={onSubmit}>
           <div className="form-grid">
             <div className="form-group">
               <label htmlFor="fullName">Full Name*</label>
@@ -43,10 +79,25 @@ const Contactus = () => {
           </div>
 
           <div className="form-actions">
-            <button type="submit" className="submit-btn">SEND</button>
+            <button type="submit" className="submit-btn" disabled={isLoading}>
+              {isLoading ? <span className="spinner"></span> : "SEND"}
+            </button>
           </div>
+
+          <p className="terms-text">
+            By clicking, you agree to our{' '}
+            <a href="/terms" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>,{' '}
+            <a href="/policy" target="_blank" rel="noopener noreferrer">Privacy</a> and{' '}
+            <a href="/faq" target="_blank" rel="noopener noreferrer">Data Protection Policy</a>.
+          </p>
         </form>
       </main>
+
+      {showPopup && (
+        <div className={`popup ${result.startsWith("✅") ? "success" : "error"}`}>
+          {result}
+        </div>
+      )}
     </div>
   );
 };
