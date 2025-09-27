@@ -5,6 +5,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import connectImage from '../assets/4.jpg'; 
 import heroImage from '../assets/main.png';
 import visionImage from '../assets/7.jpg';
+import womenInKuwaitVideo from '../assets/Wom(en) Kuwait Video V1.mp4';
 
 
 const pressQuotes = [
@@ -71,6 +72,11 @@ const Home = () => {
         <div className="ambition-content">
           <div className="video-placeholder">
             <div className="video-overlay">
+              <video 
+              src={womenInKuwaitVideo} 
+              controls 
+              className="background-video"
+            />
               <svg
                 className="play-icon"
                 xmlns="http://www.w3.org/2000/svg"
