@@ -83,7 +83,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="footer-getdirection"
                 >
-                  Get direction <span className="arrow" >&gt;</span>
+                  Get direction <span className="arrow" ></span>
                 </a>
               </li>
                 
