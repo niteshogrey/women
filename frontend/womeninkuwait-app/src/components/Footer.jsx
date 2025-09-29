@@ -55,7 +55,7 @@ export default function Footer() {
               <FaLinkedin />
             </a> */}
             <a
-              href="#"
+              href="https://www.facebook.com/profile.php?id=61581669475386"
               aria-label="Facebook"
               target="_blank"
               rel="noopener noreferrer"
