@@ -11,7 +11,7 @@ import WomenKuwaitVideo from '../assets/WomenKuwaitVideo.mp4'
 const pressQuotes = [
   {
     quote: "Our goal is to capture high-achieving, ambitious young women at the most transformative time of their lives and have a positive impact on them. If we can do that, we can change the world.",
-    source: "Syracuse University"
+    source: "Insight News"
   },
   {
     quote: "The Women's Network succeeded in bridging the gap between interdisciplinary female students and connecting them to various professional opportunities.",

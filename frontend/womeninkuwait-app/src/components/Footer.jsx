@@ -71,10 +71,10 @@ export default function Footer() {
             <h3>Get Involved</h3>
             <ul>
               <li>
-                <a href="/join">Join the Network</a>
+                <Link to="/join">Join the Network</Link>
               </li>
               <li>
-                <a href="/contact">Contact Us</a>
+                <Link to="/contact">Contact Us</Link>
               </li>
               <li>
                 <a
@@ -94,10 +94,10 @@ export default function Footer() {
             <h3>Support</h3>
             <ul>
               <li>
-                <a href="/partner">Partner With Us</a>
+                <Link to="/partner">Partner With Us</Link>
               </li>
               <li>
-                <a href="/faq">FAQs</a>
+                <Link to="/faq">FAQs</Link>
               </li>
               <li>
                 <a href="tel:+971526260940" className="footer-phone">
@@ -118,8 +118,8 @@ export default function Footer() {
         </a>
       </div>
         <div className="footer-bottom-links">
-          <a href="/terms">Terms & Conditions</a>
-          <a href="/policy">Privacy Policy</a>
+          <Link to="/terms">Terms & Conditions</Link>
+          <Link to ="/policy">Privacy Policy</Link>
         </div>
       </div>
       
