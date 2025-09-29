@@ -104,7 +104,7 @@ const Events = () => {
       {/* --- "NEXT UP" EVENT LISTING SECTION --- */}
       <section className="events-list-section">
         <div className="events-list-container">
-          <h2 className="events-list-title">Next Up</h2>
+          <h2 className="events-list-title">Upcoming Events</h2>
           <div className="events-grid">
             {upcomingEventsData.map((event, index) => (
               <div 
