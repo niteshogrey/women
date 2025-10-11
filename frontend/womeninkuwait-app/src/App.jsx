@@ -1,7 +1,6 @@
-import React from "react";
+import React, { lazy } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
 import Layout from "./components/Layout";
 import AboutUs from "./pages/Aboutus";
 import Join from "./pages/Join";
@@ -11,6 +10,8 @@ import Terms from "./pages/Terms";
 import Policy from "./pages/Policy";
 import Partner from "./pages/Partner";
 import Contactus from "./pages/Contactus";
+
+const Home = lazy(() => import("./pages/Home"));
 
 export default function App() {
   return (
