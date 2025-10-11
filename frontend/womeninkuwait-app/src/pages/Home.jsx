@@ -1,10 +1,11 @@
 
 import { Link } from 'react-router-dom';
 import '../Home.css';
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import connectImage from '../assets/4.jpg';
 import heroImage from '../assets/main.png';
 import visionImage from '../assets/7.jpg';
+import logo1 from '../assets/logo1.png';
 import WomenKuwaitVideo from '../assets/WomenKuwaitVideo.mp4'
 
 
@@ -80,7 +81,7 @@ const Home = () => {
               >
               <svg
                 className="play-icon"
-                xmlns={WomenKuwaitVideo}
+                xmlns={logo1}
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
@@ -133,7 +134,7 @@ const Home = () => {
 
           </div>
           <div className="stats-point">
-            <h4>Kuwaiti women are ready, Let's work together!!</h4>
+            <h4>Women in Kuwait are ready, Let's work together!!</h4>
           </div>
 
         </div>
