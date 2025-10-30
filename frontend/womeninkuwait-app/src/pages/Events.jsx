@@ -3,17 +3,61 @@ import '../Events.css';
 
 import eventsHeroImage from '../assets/6.png';
 import joinSectionImage from '../assets/3.jpg';
-import digitalMarketingImage from '../assets/5.jpg';
+// import digitalMarketingImage from '../assets/5.jpg';
+import coffee_and_connect from '../assets/coffee-and-connect-event.jpg';
+
 
 
 const upcomingEventsData = [
+  // {
+  //   image: digitalMarketingImage,
+  //   title: 'Exciting event with Wom(en) Kuwait',
+  //   date: 'Launching this October',
+  //   description: 'Wom(en) Kuwait’s first event is launching this October. With this event, we will start our journey of connecting ambitious, curious women all over Kuwait. As we get closer to the launch date, we will release more information. Please keep watching this space. We don’t want you to miss out on a chance to meet the brilliant minds of Kuwait.',
+  //   location: 'To be determined',
+  // },
   {
-    image: digitalMarketingImage,
-    title: 'Exciting event with Wom(en) Kuwait',
-    date: 'Launching this October',
-    description: 'Wom(en) Kuwait’s first event is launching this October. With this event, we will start our journey of connecting ambitious, curious women all over Kuwait. As we get closer to the launch date, we will release more information. Please keep watching this space. We don’t want you to miss out on a chance to meet the brilliant minds of Kuwait.',
+    image: coffee_and_connect,
+    title: 'Coffee and Connect Event',
+    date: 'Coming up this November',
+    description: "Join us for an afternoon dedicated to genuine connection. This isn't just about coffee; it's an activity designed to foster warm conversations and build community in a relaxed and welcoming environment. Start your day by networking with like-minded women and enjoying the warmth of good company.",
     location: 'To be determined',
   },
+  // {
+  //   image: coffee_and_connect,
+  //   title: 'Luxury Networking Night',
+  //   date: 'Coming up this December',
+  //   description: "Experience an evening of pure elegance designed for high-level networking and connection. Mingle with inspiring women as you enjoy sophisticated mocktails and music. This event is a premier opportunity to forge meaningful connections in a chic and exclusive setting.",
+  //   location: 'To be determined',
+  // },
+  // {
+  //   image: coffee_and_connect,
+  //   title: "Vision Board Party",
+  //   date: 'Coming up this February',
+  //   description: "Tap into your creativity and set your intentions for the future. This hands-on activity involves visualizing your next chapter and creating a powerful vision board. More importantly, it's a night to dream out loud in a supportive space, connecting with others as you share your goals and aspirations.",
+  //   location: 'To be determined',
+  // },
+  // {
+  //   image: coffee_and_connect,
+  //   title: "Painting and Pottery",
+  //   date: 'Coming up this March',
+  //   description: "Unleash your inner artist in this calming, creative session. Whether you choose painting or pottery, this hands-on activity is a chance to express yourself through colors and clay. Connect with fellow members in a relaxed environment, finding inner stillness and sparking new friendships through shared creativity.",
+  //   location: 'To be determined',
+  // },
+  // {
+  //   image: coffee_and_connect,
+  //   title: "Pop-Up Market for Women Entrepreneurs",
+  //   date: 'Coming up this April',
+  //   description: "Energize your mind and body! This morning is all about movement, offering dynamic activities like yoga and cycling. Join other Wom(en) Kuwait members to stretch, move, and awaken your body with rhythm and flow. It's a perfect way to connect over shared wellness goals and start your day strong.",
+  //   location: 'To be determined',
+  // },
+  // {
+  //   image: coffee_and_connect,
+  //   title: "Public Speaking: Women Who Inspire",
+  //   date: 'Coming up this May',
+  //   description: "Prepare to be inspired. This event features powerful, unfiltered stories from women who have built, pivoted, and found their way. It’s more than just a lecture; it's a deep connection activity, hearing stories straight from the heart. Network with the speakers and other members moved by these honest journeys.",
+  //   location: 'To be determined',
+  // },
 ];
 
 const whyJoinData = [
