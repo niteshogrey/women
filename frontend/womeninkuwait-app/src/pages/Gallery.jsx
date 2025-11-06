@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "../Gallery.css";
 import hero from "../assets/1.png";
-import event1_img1 from "../assets/event1/event1_img1.png";
-import event1_img2 from "../assets/event1/event1_img2.jpg";
-import event1_img3 from "../assets/event1/event1_img3.jpg";
-import event1_img4 from "../assets/event1/event1_img4.jpeg";
+import event1_img1 from "../assets/event1/img1.png";
+import event1_img2 from "../assets/event1/img2.jpg";
+import event1_img3 from "../assets/event1/img3.jpg";
+import event1_img4 from "../assets/event1/img4.jpeg";
 
 
 
